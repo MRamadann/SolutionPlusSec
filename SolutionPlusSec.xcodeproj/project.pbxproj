@@ -15,6 +15,11 @@
 		1808A7AE2B9F1618009D3F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1808A7AC2B9F1618009D3F50 /* LaunchScreen.storyboard */; };
 		181C08862BA0DF800002BDE5 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181C08852BA0DF800002BDE5 /* View.xib */; };
 		181C08882BA0DFDF0002BDE5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C08872BA0DFDF0002BDE5 /* CustomView.swift */; };
+		1874600C2BB8533D00BCA836 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874600B2BB8533D00BCA836 /* LoginRequest.swift */; };
+		1874600E2BB8536200BCA836 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874600D2BB8536200BCA836 /* LoginResponse.swift */; };
+		187460112BB855AF00BCA836 /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187460102BB855AF00BCA836 /* LoginEndpoint.swift */; };
+		187460142BB8569E00BCA836 /* MyUIUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 187460132BB8569E00BCA836 /* MyUIUtilities */; };
+		187460172BB85BEA00BCA836 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187460162BB85BEA00BCA836 /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,10 @@
 		181C08852BA0DF800002BDE5 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		181C08872BA0DFDF0002BDE5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		18642EE52BA0625400E98E7B /* MyUIUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyUIUtilities; path = ../MyUIUtilities; sourceTree = "<group>"; };
+		1874600B2BB8533D00BCA836 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		1874600D2BB8536200BCA836 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		187460102BB855AF00BCA836 /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
+		187460162BB85BEA00BCA836 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187460142BB8569E00BCA836 /* MyUIUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +67,7 @@
 				1808A7A02B9F1616009D3F50 /* SolutionPlusSec */,
 				18642EE42BA0625400E98E7B /* Packages */,
 				1808A79F2B9F1616009D3F50 /* Products */,
+				187460122BB8569E00BCA836 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +82,9 @@
 		1808A7A02B9F1616009D3F50 /* SolutionPlusSec */ = {
 			isa = PBXGroup;
 			children = (
+				187460152BB85BD400BCA836 /* Service */,
+				1874600F2BB8558A00BCA836 /* Endpoints */,
+				1874600A2BB8532700BCA836 /* Models */,
 				1808A7A12B9F1616009D3F50 /* AppDelegate.swift */,
 				1808A7A32B9F1616009D3F50 /* SceneDelegate.swift */,
 				1808A7A52B9F1616009D3F50 /* ViewController.swift */,
@@ -91,6 +105,38 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		1874600A2BB8532700BCA836 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1874600B2BB8533D00BCA836 /* LoginRequest.swift */,
+				1874600D2BB8536200BCA836 /* LoginResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1874600F2BB8558A00BCA836 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				187460102BB855AF00BCA836 /* LoginEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		187460122BB8569E00BCA836 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		187460152BB85BD400BCA836 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				187460162BB85BEA00BCA836 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,6 +153,9 @@
 			dependencies = (
 			);
 			name = SolutionPlusSec;
+			packageProductDependencies = (
+				187460132BB8569E00BCA836 /* MyUIUtilities */,
+			);
 			productName = SolutionPlusSec;
 			productReference = 1808A79E2B9F1616009D3F50 /* SolutionPlusSec.app */;
 			productType = "com.apple.product-type.application";
@@ -166,7 +215,11 @@
 				1808A7A62B9F1616009D3F50 /* ViewController.swift in Sources */,
 				181C08882BA0DFDF0002BDE5 /* CustomView.swift in Sources */,
 				1808A7A22B9F1616009D3F50 /* AppDelegate.swift in Sources */,
+				1874600C2BB8533D00BCA836 /* LoginRequest.swift in Sources */,
 				1808A7A42B9F1616009D3F50 /* SceneDelegate.swift in Sources */,
+				187460112BB855AF00BCA836 /* LoginEndpoint.swift in Sources */,
+				1874600E2BB8536200BCA836 /* LoginResponse.swift in Sources */,
+				187460172BB85BEA00BCA836 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +435,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		187460132BB8569E00BCA836 /* MyUIUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyUIUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1808A7962B9F1616009D3F50 /* Project object */;
 }
